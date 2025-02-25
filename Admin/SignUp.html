@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 900px;
+            height: 500px;
+            display: flex;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left {
+            width: 50%;
+            background: url('books.JPG') no-repeat center center/cover;
+        }
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: url('logo.png') no-repeat center center/contain;
+        }
+        h2 {
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        .form {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox input {
+            width: auto;
+            margin-right: 5px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #f97316;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #ea580c;
+        }
+        .register {
+            margin-top: 10px;
+            color: #f97316;
+            text-decoration: none;
+        }
+        .register:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right">
+            <div class="logo"></div>
+            <h2>Login to your account</h2>
+            <form class="form">
+                <input type="Name" placeholder="Username" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Password" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <a href="#" class="register">Register</a>
+        </div>
+    </div>
+</body>
+</html>

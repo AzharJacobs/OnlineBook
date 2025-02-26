@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* General reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px 40px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+}
+
+/* Body and container */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Book Card Style */
+.book-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 60%;
+    max-width: 900px;
+}
+
+/* Book Image Style */
+.book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Book Details Style */
+.book-details {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-details h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.book-details h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.book-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Price and Buy Button Style */
+.price-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+#buy-btn {
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buy-btn:hover {
+    background-color: #d81b60;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">📚</div>
+        <div class="search-bar"><input type="text" placeholder="Search..."></div>
+        <div class="menu">🔍</div>
+    </div>
+
+    <div class="container">
+        <div class="book-card">
+            <div class="book-image">
+                <img src="book-cover.jpg" alt="Dune Book Cover">
+            </div>
+            <div class="book-details">
+                <h1>Dune</h1>
+                <h2>Frank Herbert</h2>
+                <p>Dune is set in the distant future amid a feudal interstellar society in which various noble houses control planetary fiefs...</p>
+                <div class="price-buy">
+                    <span class="price">$87.75</span>
+                    <button id="buy-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

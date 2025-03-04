@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Web</title>
+    <title>Manga Haven - Your Online Manga Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -13,56 +13,82 @@
             font-family: 'Poppins', sans-serif;
         }
         body {
-            background-color: #f5f5f5;
+            background-color: #121212;
+            color: white;
         }
-        .header {
+        /* Navbar */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #222;
-            color: white;
+            background: #1e1e1e;
             padding: 15px 40px;
         }
-        .search-bar {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 5px;
-            border-radius: 5px;
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ff4757;
         }
         .search-bar input {
             border: none;
             outline: none;
             padding: 8px;
+            border-radius: 5px;
         }
+        /* Hero Section */
         .banner {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            text-align: left;
+            justify-content: center;
             background: url('Home.JPG') no-repeat center center/cover;
-            height: 300px;
-            color: white;
-            font-size: 24px;
-            font-weight: 600;
+            height: 450px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
             padding: 40px;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.5);
         }
+        .banner span {
+            background: rgba(255, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .banner button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            background: #ff4757;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .banner button:hover {
+            background: #e84118;
+        }
+        /* Sections */
         .content {
             padding: 20px;
         }
         .section {
-            background: white;
+            background: #1e1e1e;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
         .section h2 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 18px;
+            font-size: 22px;
         }
+        /* Book List */
         .book-list {
             display: flex;
             gap: 15px;
@@ -71,72 +97,119 @@
         }
         .book {
             text-align: center;
-            background: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            min-width: 120px;
-        }
-        .footer {
-            background: #222;
-            color: white;
-            text-align: center;
+            background: #2a2a2a;
             padding: 15px;
-            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(255, 0, 0, 0.3);
+            min-width: 140px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .book:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 12px rgba(255, 0, 0, 0.5);
+        }
+        .book img {
+            width: 120px;
+            border-radius: 5px;
+        }
+        /* Testimonials */
+        .testimonials {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
+        .review {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 2px 8px rgba(255, 0, 0, 0.3);
+            min-width: 250px;
+        }
+        /* Footer */
+        .footer {
+            background: #1e1e1e;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">📚</div>
-        <div class="search-bar"><input type="text" placeholder="Search..."></div>
-        <div class="menu">🔍</div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">📖 Manga Haven</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Genres</a>
+            <a href="#">Bestsellers</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search manga...">
+        </div>
     </div>
-    
-    <div class="banner">25% discount on all Paulo Coelho books!</div>
-    
+
+    <!-- Hero Section -->
+    <div class="banner">
+        <span>🔥 Limited Time Offer: 25% OFF on all Manga Collections! 🔥</span>
+        <button>Shop Now</button>
+    </div>
+
     <div class="content">
+
+        <!-- Best Sellers -->
         <div class="section">
-            <h2>Best Seller <a href="#">View all</a></h2>
+            <h2>🔥 Best Sellers <a href="#">View all</a></h2>
             <div class="book-list">
-                <div class="book"> <img src="/Books/Bleach Cover.jpg" alt="Dune Book Cover" width="100"> 📖 Dune<br> $87.75</div>
-                <div class="book"> <img src="/Books/Demon Slayer.jpg" alt="Dune Book Cover" width="100">📖 1984<br> $35.75</div>
-                <div class="book"> <img src="/Books/Dr_ Stone S3E21.jpg" alt="Dune Book Cover" width="100">📖 Ikigai<br> $36.00</div>
-                <div class="book"> <img src="/Books/Fairy Tale.jpg" alt="Dune Book Cover" width="100">📖 Paris Letters<br> $50.00</div>
-                <div class="book"> <img src="/Books/Black Clover Japanese edition # 1.jpg" alt="Dune Book Cover" width="100">📖 UterzFA<br> $36.00</div>
+                <div class="book"><img src="/Books/Bleach Cover.jpg" alt="Bleach"><br>Bleach<br>$12.99</div>
+                <div class="book"><img src="/Books/Demon Slayer.jpg" alt="Demon Slayer"><br>Demon Slayer<br>$10.99</div>
             </div>
         </div>
-        
+
+        <!-- Manga Categories -->
         <div class="section">
-            <h2>Classics <a href="#">View all</a></h2>
+            <h2>📚 Shop by Genre</h2>
             <div class="book-list">
-                <div class="book">📖 Pride and Prejudice</div>
-                <div class="book">📖 Moby-Dick</div>
-                <div class="book">📖 The Great Gatsby</div>
+                <div class="book">Shonen</div>
+                <div class="book">Seinen</div>
+                <div class="book">Shojo</div>
+                <div class="book">Isekai</div>
             </div>
         </div>
-        
+
+        <!-- Customer Testimonials -->
         <div class="section">
-            <h2>New Arrivals <a href="#">View all</a></h2>
-            <div class="book-list">
-                <div class="book">📖 The Midnight Library</div>
-                <div class="book">📖 Project Hail Mary</div>
-                <div class="book">📖 The Paper Palace</div>
+            <h2>🌟 What Our Customers Say</h2>
+            <div class="testimonials">
+                <div class="review">"Amazing collection! I found every manga I was looking for!" - Alex</div>
+                <div class="review">"Fast delivery and great quality!" - Jamie</div>
             </div>
         </div>
-        
+
+        <!-- Newsletter Signup -->
         <div class="section">
-            <h2>Staff Picks <a href="#">View all</a></h2>
-            <div class="book-list">
-                <div class="book">📖 Where the Crawdads Sing</div>
-                <div class="book">📖 Educated</div>
-                <div class="book">📖 The Nightingale</div>
-            </div>
+            <h2>📩 Join Our Newsletter</h2>
+            <p>Get updates on new arrivals and exclusive discounts!</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
         </div>
+
     </div>
-    
+
     <div class="footer">
-        &copy; 2025 Bookstore. All Rights Reserved.
+        &copy; 2025 Manga Haven. All Rights Reserved.
     </div>
+
 </body>
 </html>
